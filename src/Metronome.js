@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import './metronome.css'
 
 const Metronome = () => {
-    let bpm = 120
-    let playing = false
+    const [bpm, setBpm] = useState(120)
+    const [playing, setPlaying] = useState(false)
+    const [count, setCount] = useState(0)
+    const [beatsPerMeasure, setBeatsPerMeasure] = useState(4)
 
     return (
         <div className='metronome'>
