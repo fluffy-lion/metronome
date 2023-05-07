@@ -1,11 +1,17 @@
+import './metronome.css'
+
 const Metronome = () => {
     let bpm = 120
     let playing = false
 
     return (
-        <div>
+        <div className='metronome'>
             <h1>metro</h1>
-            <div>{bpm}</div>
+            <div className='bpm-slider'>
+                <div>{bpm}</div>
+                <input type="range" min="60" max="240"></input>
+            </div>
+            <button>{playing ? 'stop' : 'start'}</button>
         </div>
     )
 }
